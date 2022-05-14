@@ -13,6 +13,7 @@ const Input: React.FC = () => {
     const { allPrompts } = useSelector((state: RootState) => state.allPromptser);
     const dispatch = useDispatch();
     const [engine, setEngine] = useState<string>('text-curie-001'); // state for AI Engine
+    const [text, setText] = useState<string>(''); 
     const storedPrompts = localStorage.getItem('allPrompts'); //accessing user's local storage to check old responses
 
     const handleEngine = (e: any): void => {
@@ -25,11 +26,11 @@ const Input: React.FC = () => {
 
         // Dealing with OpenAI API 
         const configuration = new Configuration({
-            apiKey: 'Type your API Key here',
+            apiKey: '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',
         });
         const openai = new OpenAIApi(configuration);
         openai.createCompletion(engine, {
-            prompt: `I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with "Unknown".${e.target.text.value}`,
+            prompt: `${e.target.text.value}`,
             temperature: 0.5,
             max_tokens: 64,
             top_p: 1,
@@ -39,7 +40,10 @@ const Input: React.FC = () => {
             .then((res: any): any => {
                 dispatch(newPrompt(e.target.text.value)); //Sending action to the reducer to change state
                 dispatch(newResponse(res.data.choices[0].text));
+                setText('');
             });
+
+        
     };
 
     // Saving the responses in an array everytime new response comes
@@ -82,7 +86,9 @@ const Input: React.FC = () => {
                             className="form-control shadow-none"
                             id="form-control-area"
                             rows={6}
-                            placeholder="Enter Question and then press 'Submit'">
+                            placeholder="Enter Question and then press 'Submit'"
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}>
                         </textarea>
                     </div>
                 </div>
