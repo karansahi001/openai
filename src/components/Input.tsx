@@ -66,9 +66,9 @@ const Input: React.FC = () => {
             <div className="row justify-content-center">
                 <div className="col-8">
                     <h1 className="display-5">Fun with
-                        <span className="fw-bold text-danger"> Q</span>
+                        <span className="text-danger"> Q</span>
                         &#38;
-                        <span className="fw-bold text-success">A </span>
+                        <span className="text-success">A </span>
                         AI
                     </h1>
                 </div>
