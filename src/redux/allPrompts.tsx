@@ -15,10 +15,13 @@ export const allPromptsSlice = createSlice({
     newallPrompts: (state, action: PayloadAction<any[]>) => {
       state.allPrompts = action.payload
     },
+    promptsClear: (state) => {
+      state.allPrompts = []
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { newallPrompts } = allPromptsSlice.actions
+export const { newallPrompts, promptsClear } = allPromptsSlice.actions
 
 export default allPromptsSlice.reducer
