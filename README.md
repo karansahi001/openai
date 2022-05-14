@@ -8,6 +8,8 @@ Following is some additional information about this project. Such as what tech s
 ### Live Link:
 https://open-ai-gpt-3.netlify.app/ <br/><br/>
 
+- start command for the project: "npm start"
+
 ## 💻 Tech Stack used:
 
 - React
