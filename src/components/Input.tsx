@@ -26,7 +26,7 @@ const Input: React.FC = () => {
 
         // Dealing with OpenAI API 
         const configuration = new Configuration({
-            apiKey: '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',
+            apiKey: '',
         });
         const openai = new OpenAIApi(configuration);
         openai.createCompletion(engine, {
