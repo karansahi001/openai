@@ -17,7 +17,6 @@ https://open-ai-gpt-3.netlify.app/ <br/><br/>
 - "Clear History" option
 - Light/ Dark Mode
 - A Dropdown menu to select the AI engine
-- Responsive
 
 ## 💻 Tech Stack used:
 
