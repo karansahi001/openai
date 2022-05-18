@@ -15,6 +15,7 @@ https://open-ai-gpt-3.netlify.app/ <br/><br/>
 - Shows all user responses (newest first)
 - Save responses if the user leaves or reloads the page
 - "Clear History" option
+- Light/ Dark Mode
 - A Dropdown menu to select the AI engine
 - Responsive
 
