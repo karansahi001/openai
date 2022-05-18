@@ -10,6 +10,14 @@ https://open-ai-gpt-3.netlify.app/ <br/><br/>
 
 - start command for the project: "npm start"
 
+## 🗒️ Features:
+
+- Shows all user responses (newest first)
+- Save responses if the user leaves or reloads the page
+- "Clear History" option
+- A Dropdown menu to select the AI engine
+- Responsive
+
 ## 💻 Tech Stack used:
 
 - React
@@ -18,12 +26,7 @@ https://open-ai-gpt-3.netlify.app/ <br/><br/>
 - Redux
 - Redux toolkit
 
-## 🗒️ Features:
 
-- Shows all user responses (newest first)
-- Save responses if the user leaves or reloads the page
-- Have a select box which allows the user choose the AI engine
-- Responsive
 
 
 ## Screenshot:
